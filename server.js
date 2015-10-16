@@ -10,7 +10,7 @@ var router = express.Router();
 // configuration
 var apiurl = 'http://api.openweathermap.org/data/2.5/weather';
 var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-var port = 3000;
+var port = process.env.VCAP_APP_PORT || 3000;
 app.use(express.static(__dirname + '/public'));
 
 // define routes
