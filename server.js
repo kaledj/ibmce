@@ -41,7 +41,7 @@ router.get('/weather', function(req, res) {
                     'low': body.main.temp_min,
                     'current': body.main.temp
                 },
-                'conditions': body.weather.main
+                'conditions': body.weather[0].main
             });
         } else {
             console.log('Error: ' + error);

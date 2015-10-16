@@ -19,6 +19,7 @@
         </div>
         <div id="weather-data" class="text-center">
             Location: {{ weatherData.coordinates.lon }}, {{ weatherData.coordinates.lat}} <br>
+            Current Weather: {{ weatherData.conditions }}<br>
             Temperature: {{ weatherData.temperature.current }} <br>
             Max Temp: {{ weatherData.temperature.high }} <br>
             Min Temp: {{ weatherData.temperature.low }} <br>
