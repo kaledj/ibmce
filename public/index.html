@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="ibmExercise">
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <style>body { padding-top:50px; } </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="core.js"></script>
+    </head>
+    <body ng-controller="mainController">
+        <div class="container">
+        <div id="input" class="text-center">
+            <form>
+                <div>City<input type="text" ng-model="formData.city"></div>
+                <div>Zip<input type="text" ng-model="formData.zip"></div>
+                <div>Units<input type="text" ng-model="formData.units" placeholder="imperial, metric, or kelvin..."></div>
+                <button type="submit" ng-click="getWeatherData()">Submit</button>
+            </form>
+        </div>
+        <div id="weather-data" class="text-center">
+            Location: {{ weatherData.coordinates.lon }}, {{ weatherData.coordinates.lat}} <br>
+            Temperature: {{ weatherData.temperature.current }} <br>
+            Max Temp: {{ weatherData.temperature.high }} <br>
+            Min Temp: {{ weatherData.temperature.low }} <br>
+        </div></div>
+    </body>
+</html>
+

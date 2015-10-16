@@ -1,0 +1,11 @@
+{
+    "name": "ibm-exercise",
+    "main": "server.js",
+    "private": "true",
+    "dependencies": {
+        "express": ">=4.13.3",
+        "request": ">=2.65.0",
+        "angular": ">=1.4.7"
+    }
+}
+
